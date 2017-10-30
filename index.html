@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    
+    <body>
+    <h1 class="pause" style="display:none;">C'est la pause !!</h1>
+    <script>
+        
+        function checkHour() {
+            var date = new Date();
+            var pause = document.querySelector(".pause");
+            
+            if(date.getHours() == 10 && (date.getMinutes() >= 30 && date.getMinutes() <= 40)) {
+                pause.style.display = "block";
+            } else {
+                pause.style.display = "none";
+            }
+        }
+        
+        setInterval(checkHour, 300000);
+        
+        checkHour();
+        
+    </script>
+    </body>
+</html>
